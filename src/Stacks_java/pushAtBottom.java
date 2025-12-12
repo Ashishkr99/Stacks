@@ -12,6 +12,15 @@ public class pushAtBottom {
 
         pushAtbottom(st,20);
         System.out.println(st);
+        reverse(st);
+        System.out.println(st);
+    }
+
+    private static void reverse(Stack<Integer> st) {
+        if(st.size()<=1) return;
+        int top =st.pop();
+        reverse(st); //magic
+        pushAtbottom(st,top);
     }
 
     private static void pushAtbottom(Stack<Integer> st, int i) {
